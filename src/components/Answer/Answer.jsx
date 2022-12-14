@@ -11,7 +11,6 @@ export default function Answer(props){
     const gameFinished = props.gameFinished
     let bgColor = "" 
     let opacity = 1
-    let cursor = "pointer"
     
     if (selected && !gameFinished){
         bgColor = "#D6DBF5"
