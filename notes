@@ -1,0 +1,46 @@
+    
+   //****Toggle function****
+    
+    // const [answers, setAnswers] = React.useState(answers)
+    
+    // function toggle(id) {
+    //     setAnswers(prevAnswers => {
+    //         return prevAnswers.map((answer) => {
+    //             return answer.id === id ? {...answer, selected: !answer.selected} : answer
+    //         })
+    //     })
+    // }
+
+
+
+
+
+
+//---------------working toggleFn-----------------------
+
+
+   //  function toggleFn(questionId, id) {
+   //    console.log(questions)
+   //    setQuestions(prevQuestions => {
+   //      return(
+   //        prevQuestions.map(prevQuestion => {
+  
+   //          const answers = prevQuestion.allAnswers
+   //          const newAnswers =  answers.map(answer => {
+  
+   //                if (answer.id === id){
+   //                  return {...answer, selected: !answer.selected}
+   //                } else{
+   //                  return {...answer, selected: false}
+   //                }
+   //              })
+                
+   //            return {...prevQuestion, allAnswers:newAnswers}                       
+  
+                
+   //        })
+   //      )
+   //    })
+      
+   //  }
+  
