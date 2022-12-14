@@ -15,7 +15,7 @@ export default function Answer(props){
     
     if (selected && !gameFinished){
         bgColor = "#D6DBF5"
-        } else if(selected && gameFinished && isCorrect){
+        } else if(gameFinished && isCorrect){
         bgColor = "#94D7A2"
         } else if(selected && gameFinished && !isCorrect){
         bgColor ="#F8BCBC"
