@@ -13,6 +13,9 @@ function App() {
   const [gameFinished, setGameFinished] = useState(false)
   const [gameScore, setGameScore] = useState(0)
 
+
+
+  //This function transforms the API results in a very similar "questions state object" but adding some extra data like id's and an array with the answers refactored.
   function getQuestionWithAnswers(question){
     const allAnswers = []
     const id = nanoid()
@@ -45,7 +48,7 @@ function App() {
   }
 
 
-
+//Gets questions from the API and uses the "getQuestionsWithAnswers" method to refactor the data and set the question State
   function getQuestions(){
     fetch("https://opentdb.com/api.php?amount=4&type=multiple")
       .then(res => res.json())
@@ -59,7 +62,7 @@ function App() {
   }
 
 
-
+//Toggles the "selected" property of the answers inside the questions
   function toggleFn(questionId, id) {
     setQuestions(prevQuestions => {
       return(
@@ -83,7 +86,9 @@ function App() {
     
   }
 
-
+//Checks the the answers by toggling the "checked" property on the answers inside each question in the questions state 
+//checks the correct answers, and leaves the incorrect answers as they are
+//sets the questions state and the gameFinished state with the corresponding data
   function checkAnswers(){
 
   const checkedQuestions = questions.map(question => {
@@ -152,7 +157,7 @@ return (
           gameFinished?
 
           <>
-          <p className="score">{gameScore + "/4"}</p>
+          <p className="score">{`you scored ${gameScore} / 4 points!`}</p>
           <button
           onClick={restartGame}
           >Restart Game

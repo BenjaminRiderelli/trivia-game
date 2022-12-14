@@ -20,7 +20,7 @@ export default function Answer(props){
         bgColor ="#F8BCBC"
         opacity = 0.5
         } else if(!selected && gameFinished) {
-        bgColor = ""
+        bgColor = "transparent"
         opacity = 0.5
         }
 
@@ -35,7 +35,7 @@ export default function Answer(props){
         <p
         style={styles} 
         className="answer"
-        onClick={!gameFinished? () => props.toggleFn(questionId, answerId) : ""}
+        onClick={!gameFinished? () => props.toggleFn(questionId, answerId) : () => alert("press the button to try again!")}
         >
             {props.answer}
         </p>
