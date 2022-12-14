@@ -152,7 +152,7 @@ return (
           gameFinished?
 
           <>
-          <p className="score">{gameScore + "/5"}</p>
+          <p className="score">{gameScore + "/4"}</p>
           <button
           onClick={restartGame}
           >Restart Game

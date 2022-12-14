@@ -22,7 +22,8 @@ export default function Question(props){
             toggleFn={props.toggleFn}
             gameFinished={props.gameFinished}            
             />
-        </>)
+        </>
+      )
     })
 
 
